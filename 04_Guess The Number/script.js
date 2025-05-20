@@ -49,3 +49,19 @@ function validateGuess (guess){
     }
     //check if the userinput value is in between 1 and 100  no negative no alphabate
 }
+
+function checkGuess(guess){
+    if(guess === randomNumber){
+        displayMessage("you guessed it right")
+        endGame();
+    }
+    else if(guess < randomNumber){
+        displayMessage("number is too low")
+    }
+    else if(guess > randomNumber){
+        displayMessage("number is too high")
+    }
+
+    //check the value if the vakue is equal to the random no or it also tell hi or low for the number
+}
+
