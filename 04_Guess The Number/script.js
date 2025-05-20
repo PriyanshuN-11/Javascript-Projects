@@ -25,3 +25,27 @@ if (playGame) {
     });
 }
 
+function validateGuess (guess){
+    if(isNaN(guess)){
+        alert("enter a vaild number")
+    }
+    else if(guess <1){
+        alert("enter number more than 1")
+    }
+    else if(guess >100){
+        alert("enter number less than 100")
+    }
+    else {
+        prevGuess.push(guess)
+        if(numGuess === 11){
+            displayGuess(guess)
+            displayMessage(`Game over you lose the random number was ${randomNumber}`)
+            endGame()
+        }
+        else{
+            displayGuess(guess);
+            checkGuess(guess)
+        }
+    }
+    //check if the userinput value is in between 1 and 100  no negative no alphabate
+}
