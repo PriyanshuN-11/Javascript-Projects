@@ -77,3 +77,13 @@ function displayMessage(message){
     lowOrHi.innerHTML = `<h2>${message}</h2>`;
     //pass the message in lowOrHi
 }
+
+function endGame() {
+  userInput.value = '';
+  userInput.setAttribute('disabled', '');
+  p.classList.add('button');
+  p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
+  startOver.appendChild(p);
+  playGame = false;
+  newGame();
+}
