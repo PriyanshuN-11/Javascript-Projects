@@ -65,3 +65,15 @@ function checkGuess(guess){
     //check the value if the vakue is equal to the random no or it also tell hi or low for the number
 }
 
+function displayGuess(guess){
+    userInput.value = " "
+    guessSlot.innerHTML += `${guess}, `;
+    numGuess++;
+    remaining.innerHTML = `${11 - numGuess}`;
+    //clean the value in and update array and guesses remaining 
+}
+
+function displayMessage(message){
+    lowOrHi.innerHTML = `<h2>${message}</h2>`;
+    //pass the message in lowOrHi
+}
