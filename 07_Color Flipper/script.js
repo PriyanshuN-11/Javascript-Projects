@@ -32,3 +32,14 @@ button.forEach(function(btn){
     
     })
 })
+
+//random button functionality
+
+function randomColor(){
+    let red = Math.round(Math.random()*255)
+    let green = Math.round(Math.random()*255)
+    let blue = Math.round(Math.random()*255)
+
+    let RGB = `rgb(${red},${green},${blue})`
+    body.style.backgroundColor = RGB;
+}
