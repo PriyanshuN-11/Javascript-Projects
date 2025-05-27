@@ -10,6 +10,7 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +22,7 @@ body {
     text-align: center;
 }
 
-.insert {
+#insert {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,4 +42,57 @@ body {
 
 .key:hover {
     border-color: #00adb5;
+}
+
+/* Table styling */
+
+.color {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    padding: 18px 15px;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+th {
+    background-color: #00adb5;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    font-size: 18px;
+    color: #f5f5f5;
+}
+
+tr:hover td {
+    background-color: #424242;
+}
+
+/* Responsive design */
+
+@media (max-width: 500px) {
+    .key {
+        font-size: 17px;
+        padding: 20px;
+    }
+
+    th, td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
 }
