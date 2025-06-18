@@ -34,8 +34,10 @@ function loadItems() {
 }
 
 function saveItems() {
-
+    const stringItems = JSON.stringify(items);
+    localStorage.setItem(storageKey, stringItems)
 }
+
 
 
 function addItem() {
