@@ -53,6 +53,9 @@ function addItem() {
 }
 
 function removeItem(idx) {
-
+    items.splice(idx, 1)
+    renderItems()
+    saveItems()
 }
 
+document.addEventListener("DOMContentLoaded", loadItems)
