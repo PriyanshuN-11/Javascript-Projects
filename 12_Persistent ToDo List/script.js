@@ -41,7 +41,15 @@ function saveItems() {
 
 
 function addItem() {
- 
+    const value = input.value;
+    if (!value) {
+        alert("You cannot add an empty item")
+        return
+    }
+    items.push(value)
+    renderItems()
+    input.value = ""
+    saveItems()
 }
 
 function removeItem(idx) {
