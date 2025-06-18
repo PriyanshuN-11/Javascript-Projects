@@ -28,6 +28,9 @@ function renderItems() {
 }
 
 function loadItems() {
+    const oldItems = localStorage.getItem(storageKey)
+    if (oldItems) items = JSON.parse(oldItems)
+    renderItems()
 }
 
 function saveItems() {
